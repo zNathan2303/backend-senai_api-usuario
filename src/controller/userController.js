@@ -35,7 +35,7 @@ const createUser = (req, res) => {
     if (!name || !email) {
         return res.status(400).json({ mensagem: 'Nome e email são obrigatórios' })
     } else {
-        const newUser = userModel.createUser(name, email)
+        const newUser = userModel.createUser({ name, email })
         res.status(201).json(newUser)
     }
 }

@@ -11,7 +11,7 @@ const userController = require('./src/controller/userController.js')
 const app = express()
 
 // Definir um Middleware para analisar json no corpo das requisições
-app.use(express.json)
+app.use(express.json())
 
 // Definir a porta em que o servidor irá escutar
 const porta = 8000
